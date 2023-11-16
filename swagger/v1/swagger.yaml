@@ -1,0 +1,334 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  "/api/v1/users/{user_id}/bills":
+    parameters:
+    - name: user_id
+      in: path
+      description: user_id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: list bills
+      tags:
+      - Bills
+      security:
+      - Bearer: {}
+      responses:
+        '200':
+          description: successful
+    post:
+      summary: create bill
+      tags:
+      - Bills
+      security:
+      - Bearer: {}
+      parameters: []
+      responses:
+        '201':
+          description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+              - measure
+              - subject
+              - author
+              - status
+              properties:
+                measure:
+                  type: string
+                subject:
+                  type: string
+                author:
+                  type: string
+                status:
+                  type: integer
+        required: true
+  "/api/v1/users/{user_id}/bills/{bill_id}":
+    parameters:
+    - name: user_id
+      in: path
+      description: user_id
+      required: true
+      schema:
+        type: string
+    - name: bill_id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show bill
+      tags:
+      - Bills
+      security:
+      - Bearer: {}
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update bill
+      tags:
+      - Bills
+      security:
+      - Bearer: {}
+      parameters: []
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                measure:
+                  type: string
+                subject:
+                  type: string
+                author:
+                  type: string
+                status:
+                  type: integer
+        required: true
+    put:
+      summary: update bill
+      tags:
+      - Bills
+      security:
+      - Bearer: {}
+      parameters: []
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                measure:
+                  type: string
+                subject:
+                  type: string
+                author:
+                  type: string
+                status:
+                  type: integer
+        required: true
+    delete:
+      summary: delete fact
+      tags:
+      - Bills
+      security:
+      - Bearer: {}
+      responses:
+        '200':
+          description: successful
+  "/api/v1/users":
+    get:
+      summary: list users
+      tags:
+      - Users
+      security:
+      - Bearer: {}
+      responses:
+        '200':
+          description: successful
+    post:
+      summary: create user
+      tags:
+      - Users
+      security:
+      - Bearer: {}
+      parameters: []
+      responses:
+        '201':
+          description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+              - first_name
+              - last_name
+              - email
+              - password
+              properties:
+                first_name:
+                  type: string
+                last_name:
+                  type: string
+                email:
+                  type: string
+                password:
+                  type: string
+        required: true
+  "/api/v1/users/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show user
+      tags:
+      - Users
+      security:
+      - Bearer: {}
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update user
+      tags:
+      - Users
+      security:
+      - Bearer: {}
+      parameters: []
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                first_name:
+                  type: string
+                last_name:
+                  type: string
+                email:
+                  type: string
+                password:
+                  type: string
+    put:
+      summary: update user
+      tags:
+      - Users
+      security:
+      - Bearer: {}
+      parameters: []
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                first_name:
+                  type: string
+                last_name:
+                  type: string
+                email:
+                  type: string
+                password:
+                  type: string
+    delete:
+      summary: delete user
+      tags:
+      - Users
+      security:
+      - Bearer: {}
+      responses:
+        '200':
+          description: successful
+  "/users":
+    post:
+      summary: create user
+      tags:
+      - Registrations
+      parameters: []
+      responses:
+        '201':
+          description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+              - first_name
+              - last_name
+              - email
+              - password
+              properties:
+                user:
+                  properties:
+                    first_name:
+                      type: string
+                    last_name:
+                      type: string
+                    email:
+                      type: string
+                    password:
+                      type: string
+        required: true
+  "/users/sign_in":
+    post:
+      summary: Creates a session
+      tags:
+      - sessions
+      parameters: []
+      responses:
+        '201':
+          description: session jwt token created
+        '401':
+          description: Unauthorized
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                user:
+                  properties:
+                    first_name:
+                      type: string
+                    last_name:
+                      type: string
+                    email:
+                      type: string
+                    password:
+                      type: string
+              required:
+              - first_name
+              - last_name
+              - email
+              - password
+        required: true
+  "/users/sign_out":
+    delete:
+      summary: Destroy JWT token
+      tags:
+      - sessions
+      security:
+      - Bearer: {}
+      responses:
+        '200':
+          description: blacklist token
+        '401':
+          description: no token to blacklist
+components:
+  securitySchemes:
+    Bearer:
+      description: Bearer token
+      type: apiKey
+      name: Authorization
+      in: header
+servers:
+- url: ''
