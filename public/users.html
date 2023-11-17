@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>FTCL</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  </head>
+  <body class='bg-info text-white'> 
+    
+    <div id="rest-ops">
+
+        <a class='text-white' href="/index.html">
+            Logon/Logoff
+        </a>
+        <br>
+        <a class='text-white' href="/bill_session.html">
+            Bills
+        </a>
+
+        <div class="container text-center">
+            <h1 class="display-1 mt-5 mb-5">
+            FTCL Users
+            </h1>
+
+            <div class="row">
+ 
+                <div class="col">
+                    <!-- Create User -->
+                    <p class="lead">Create User</p>
+                    <div class="input-group mb-3">
+                        <input id="user-firstName" type="text" class="form-control" placeholder="User First Name" aria-label="User First Name" aria-describedby="create-user">
+                        <br>
+                    </div>
+                    <div class="input-group mb-3">
+                        <input id="user-lastName" type="text" class="form-control" placeholder="User Last Name" aria-label="User Last Name" aria-describedby="create-user">
+                    </div>
+                    <div class="input-group mb-3">
+                        <input id="user-email" type="text" class="form-control" placeholder="User Email" aria-label="User Email" aria-describedby="create-user">
+                    </div>
+                    <div class="input-group mb-3">
+                        <input id="user-password" type="text" class="form-control" placeholder="User Password" aria-label="User Password" aria-describedby="create-user">
+                    </div>
+                    <div class="input-group mb-3">
+                        <input id="user-category" type="text" class="form-control" placeholder="User Category" aria-label="User Category" aria-describedby="create-user">
+                    </div>
+                        <button id="create-user" class="btn btn-primary" type="button">Create User</button>
+                </div> 
+                
+                <div class="col">
+                    <!-- List Users -->
+                    <p class="lead">List Users</p>
+                        <button id="list-users" class="btn btn-primary" type="button">List All Users</button>
+                </div>
+                
+                <div class="col">
+                    <!-- Update User -->
+                    <p class="lead">Update User</p>
+                    <div class="input-group mb-3">
+                        <input id="user-id" type="number" class="form-control" placeholder="User ID" aria-label="User ID" aria-describedby="update-user">
+                    </div>
+                    <div class="input-group mb-3">
+                        <input id="user-firstName1" type="text" class="form-control" placeholder="User First Name" aria-label="User First Name" aria-describedby="update-user">
+                    </div>
+                    <div class="input-group mb-3">
+                        <input id="user-lastName1" type="text" class="form-control" placeholder="User Last Name" aria-label="User Last Name" aria-describedby="update-user">
+                    </div>
+                    <div class="input-group mb-3">
+                        <input id="update-email" type="text" class="form-control" placeholder="Update Email" aria-label="Update Email" aria-describedby="update-user">
+                    </div>
+                    <div class="input-group mb-3">
+                        <input id="update-password" type="text" class="form-control" placeholder="Update Password" aria-label="Update Password" aria-describedby="update-user">
+                    </div>
+                    <div class="input-group mb-3">
+                        <input id="user-update-category" type="text" class="form-control" placeholder="Update User Category" aria-label="Update User Category" aria-describedby="update-user">
+                    </div>
+                        <button id="update-user" class="btn btn-primary" type="button">Update User</button>                     
+                </div> 
+                
+                <div class="col">
+                    <p class="lead">Delete User</p>
+                    <div class="input-group mb-3">
+                        <input id='user-id-delete' type="number" class="form-control" placeholder="user ID" aria-label="user ID" aria-describedby="update-user">
+                    </div>
+                        <button id='delete-user-button' class="btn btn-primary" type="button">Delete User</button>
+                </div>
+
+            </div>
+
+            <br>
+            <br>
+            <br>
+
+            <div class="row">
+                <div class="col">
+                    <div class="col-lg-6 mx-auto mt-5"
+                        <div id="results-div">
+                    </div>
+                </div>
+            </div>  
+     
+        </div>
+         
+    </div><!-- End rest-ops div -->
+
+    <script src="bill_ops.js"></script>
+
+    </body>
+</html>      
+
+    
+ 

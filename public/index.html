@@ -13,51 +13,37 @@
     
     <div id="rest-ops">
 
-        <a class='lead text-white' href="/session.html">
-            Session Operations
+        <a class='text-white' href="/users.html">
+            Users
+        </a>
+        <br>
+        <a class='text-white' href="/bill_session.html">
+            Bills
         </a>
 
         <div class="container text-center">
             <h1 class="display-1 mt-5 mb-5">
-            FTCL Registration
+            FTCL Logon
             </h1>
-        
-            <p class="lead">
-            Create New User
-            </p> 
-    
-            
-            <div class="col-lg-6 mx-auto">
-                 <!-- Create New User-->
-                <div class="input-group mb-5">
-                    <input id="user-email" type="text" class="form-control" placeholder="New User Email" aria-label="New User Email" aria-describedby="create-user">
-
-                    <input id="user-password" type="password" class="form-control" placeholder="New User Password" aria-label="New User Password" aria-describedby="create-user">
-
-                    <button id="create-user" class="btn btn-primary" type="button">Create New User</button>
-                </div>
-            </div> 
-
-            <p class="lead">
-                Logon User
-            </p> 
-
+ 
             <div class="col-lg-6 mx-auto">
                 <!-- Login User -->
+                <p class="lead"c>Logon User Email</p>
                 <div class="input-group mb-5">
                     <input id="user-email1" type="text" class="form-control" placeholder="Logon User Email" aria-label="Logon User Email" aria-describedby="logon">
-
+                </div>
+                <p class="lead">Logon Password</p>
+                <div class="input-group mb-5">
                     <input id="user-password1" type="password" class="form-control" placeholder="Logon User Password" aria-label="Logon User Password" aria-describedby="logon">
-
+                </div>
+                <!-- <div class="input-group mb-5"> -->
                     <button id="logon" class="btn btn-primary" type="button">Logon User</button>
-                </div>          
+                <!-- </div>           -->
+                    <!-- Logoff User -->
+                   <button id="logoff" class="btn btn-primary" type="button">Logoff User</button>
             </div> 
 
-            <!-- Logoff User -->
-            <p class="lead">
-                Logoff User
-            </p> 
-            <button id="logoff" class="btn btn-primary" type="button">Logoff User</button>
+ 
 
             <div class="col-lg-6 mx-auto mt-5"
                 <div id="results-div">
@@ -70,10 +56,9 @@
               
     </div><!-- End rest-ops div -->
 
-    <script src="ftcl_session.js"></script>
+    <script src="session_ops.js"></script>
 
     </body>
 </html>      
 
-
-
+  
