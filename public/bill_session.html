@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>FTCL</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  </head>
+  <body class='bg-info text-white'> 
+    
+    <div id="rest-ops">
+
+        <a class='text-white' href="/index.html">
+            Logon/Logoff
+        </a>
+        <br>
+        <a class='text-white' href="/users.html">
+            Users
+        </a>
+
+        <div class="container text-center">
+            <h1 class="display-1 mt-5 mb-5">
+            FTCL Bills
+            </h1>
+
+            <div class="row">
+ 
+                <div class="col">
+                    <!-- Create Bill -->
+                    <p class="lead">Create Bill</p>
+                    <div class="input-group mb-3">
+                        <input id = 'create-bills-user-id' type = 'number' class="form-control" placeholder="User ID" aria-label="User ID" aria-describedby="create-bills-button">
+                        <br>
+                    </div>
+                    <div class="input-group mb-3">
+                        <input id="bill-measure-to-create" type="text" class="form-control" placeholder="Bill Measure" aria-label="Bill Measure" aria-describedby="create-bills-button">
+                    </div>
+                    <div class="input-group mb-3">
+                        <input id="bill-subject-to-create" type="text" class="form-control" placeholder="Bill Subject" aria-label="Bill Subject" aria-describedby="create-bills-button">
+                    </div>
+                    <div class="input-group mb-3">
+                        <input id="bill-author-to-create" type="text" class="form-control" placeholder="Bill Author" aria-label="Bill Author" aria-describedby="create-bills-button">
+                    </div>
+                    <div class="input-group mb-3">
+                        <input id="bill-status-to-create" type="text" class="form-control" placeholder="Bill Status" aria-label="Bill Status" aria-describedby="create-bills-button">
+                    </div>
+                    <div class="input-group mb-3">
+                        <input id="bill-category-to-create" type="text" class="form-control" placeholder="Bill Category" aria-label="Bill Category" aria-describedby="create-bills-button">
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="bill-local-program-to-create">
+                        <label class="form-check-label" for="flexCheckDefault" aria-describedby="create-bills-button">
+                          Check If Local Program
+                        </label>
+                      </div>
+                        <button id="create-bills-button" class="btn btn-primary" type="button">Create Bill</button>
+                </div> 
+                
+                <div class="col">
+                    <!-- List Bills -->
+                    <p class="lead">List Bills</p>
+                    <div class="input-group mb-3">
+                        <input id='list-bills-user-id' type='number' class="form-control" placeholder="Bill ID" aria-label="Bill ID" aria-describedby="list-all-bills-button">
+                    </div>
+                    <button id="list-all-bills-button" class="btn btn-primary" type="button">List All Bills</button>
+                </div>
+                
+                <div class="col">
+                    <!-- Update Bill -->
+                    <p class="lead">Update User</p>
+                    <div class="input-group mb-3">
+                        <input id = 'bill-update-user-id' type = 'number' class="form-control" placeholder="Update User ID" aria-label="Update User ID" aria-describedby="update-bills-button">
+                    </div>
+                    <div class="input-group mb-3">
+                        <input id = 'bill-update-bill-id' type = 'number' class="form-control" placeholder="Update Bill ID" aria-label="Update Bill ID" aria-describedby="update-bills-button">
+                    </div>
+                    <div class="input-group mb-3">
+                        <input id = 'bill-measure-to-update' type="text" class="form-control" placeholder="Update Measure" aria-label="Update Measure" aria-describedby="update-bills-button">
+                    </div>
+                    <div class="input-group mb-3">
+                        <input id="bill-subject-to-update" type="text" class="form-control" placeholder="Update Subject" aria-label="Update Subject" aria-describedby="update-bills-button">
+                    </div>
+                    <div class="input-group mb-3">
+                        <input id="bill-author-to-update" type="text" class="form-control" placeholder="Update Author" aria-label="Update Author" aria-describedby="update-bills-button">
+                    </div>
+                    <div class="input-group mb-3">
+                        <input id="bill-status-to-update" type="text" class="form-control" placeholder="Update Status" aria-label="Update Status" aria-describedby="update-bills-button">
+                    </div>
+                    <div class="input-group mb-3">
+                        <input id="bill-category-to-update" type="text" class="form-control" placeholder="Update Category" aria-label="Update Category" aria-describedby="update-bills-button">
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="bill-local-program-to-update">
+                        <label class="form-check-label" for="flexCheckDefault" aria-describedby="create-bills-button">
+                          Check If Local Program
+                        </label>
+                      </div>
+                        <button id="update-bills-button" class="btn btn-primary" type="button">Update user</button>                     
+                </div> 
+                
+                <div class="col">
+                    <p class="lead">Delete Bill</p>
+                    <div class="input-group mb-3">
+                        <input id = 'delete-bills-user-id' type = 'number' class="form-control" placeholder="User ID" aria-label="User ID" aria-describedby="delete-bills-button">
+                    </div>
+                    <div class="input-group mb-3">
+                        <input id = 'delete-bills-bill-id' type = 'number' class="form-control" placeholder="Bill ID" aria-label="Bill ID" aria-describedby="delete-bills-button">
+                    </div>
+                        <button id='delete-bills-button' class="btn btn-primary" type="button">Delete Bill</button>
+                </div>
+                <div class="col">
+                    <p class="lead">CA Legislation</p>
+                    <div class="input-group mb-3">
+                        <form accept-charset="utf-8">
+                            <label>
+                            Available Categories:
+                            </label>
+                            <select>
+                            <option>
+                                All
+                            </option>
+                            <option>
+                                Business and Professions
+                            </option>
+                            <option>
+                                California Constitution
+                            </option>
+                            <option>
+                                Civil
+                            </option>
+                            <option>
+                                Civil Procedure
+                            </option>
+                            <option>
+                                Corporations
+                            </option>
+                            <option>
+                                Education
+                            </option>
+                            <option>
+                                Elections
+                            </option>
+                            <option>
+                                Evidence
+                            </option>
+                            <option>
+                                Family
+                            </option>
+                            <option>
+                                Financial
+                            </option>
+                            <option>
+                                Fish and Game
+                            </option>
+                            <option>
+                                Food and Agricultural
+                            </option>
+                            <option>
+                                Government
+                            </option>
+                            <option>
+                                Harbors and Navigation
+                            </option>
+                            <option>
+                                Health and Safety
+                            </option>
+                            <option>
+                                Insurance
+                            </option>
+                            <option>
+                                Labor
+                            </option>
+                            <option>
+                                Military and Veterans
+                            </option>
+                            <option>
+                                Penal
+                            </option>
+                            <option>
+                                Probate
+                            </option>
+                            <option>
+                                Public Contract
+                            </option>
+                            <option>
+                                Public Resources
+                            </option>
+                            <option>
+                                Public Utilities
+                            </option>
+                            <option>
+                                Revenue and Taxation
+                            </option>
+                            <option>
+                                Streets and Highways
+                            </option>
+                            <option>
+                                Unemployment Insurance
+                            </option>
+                            <option>
+                                Vehicle
+                            </option>
+                            <option>
+                                Water
+                            </option>
+                            </option>
+                            <option>
+                                Welfare and Institutions
+                            </option>
+                            </select>
+                    </div>
+                    <div class="input-group mb-3">
+                        <input id = 'bills-category' value="Find Category" class="form-control" placeholder="Enter Category" aria-label="Enter Category" aria-describedby="bills-button">
+                    </div>
+                        <button id='bills-button' class="btn btn-primary" type="button">See CA Bill</button>
+                </div>
+
+                <div class="col">
+                    <p class="lead">CA Legislation</p>
+                    <div class="input-group mb-3">
+                        <input id = 'bill-text' value="Find Bill"class="form-control" placeholder="Enter Bill Measure" aria-label="Enter Bill Measure" aria-describedby="bill-text-button">
+                    </div>
+                    <button id='bill-text-button' class="btn btn-primary" type="button">See CA Bill</button>
+                </div>
+
+            </div><!-- End 1st row div -->
+
+            <br>
+            <br>
+            <br>
+            
+             <div class="row"> 
+                <div class="col text-center">
+                    <div id="results-div"></div>
+                </div>
+            </div>
+            
+        </div><!-- container text center div -->
+              
+    </div><!-- End rest-ops div -->
+
+    <script src="bill_ops.js"></script>
+
+    </body>
+</html>      
+
+    
+ 
+
+ 
