@@ -15,8 +15,8 @@ Rails.application.routes.draw do
       resources :users do
           resources :bills
       end
-      resources(:measures, :only => :index)
-      resources(:text, :only => :index)
+      resources :measures, only: :index
+      resources :texts, only: :index
     end
   end
 end

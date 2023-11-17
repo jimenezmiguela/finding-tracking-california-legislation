@@ -133,6 +133,26 @@ paths:
       responses:
         '200':
           description: successful
+  "/api/v1/measures":
+    get:
+      summary: List Measures Query
+      tags:
+      - Measures
+      security:
+      - Bearer: {}
+      responses:
+        '200':
+          description: successful
+  "/api/v1/texts":
+    get:
+      summary: List Texts Query
+      tags:
+      - Texts
+      security:
+      - Bearer: {}
+      responses:
+        '200':
+          description: successful
   "/api/v1/users":
     get:
       summary: list users
