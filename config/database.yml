@@ -81,5 +81,7 @@ test:
 #
 production:
   <<: *default
-  url: <%= ENV['DATABASE_URL'] %>
-
+  database: finding_tracking_california_legislation_production
+  username: finding_tracking_california_legislation
+  password: <%= ENV["FINDING_TRACKING_CALIFORNIA_LEGISLATION_DATABASE_PASSWORD"] %>
+  
