@@ -54,7 +54,7 @@ function handle_ajax(event) {
     const users_path = '/api/v1/users';
     const bills_path = '/api/v1/bills';
     const measures_path = '/api/v1/measures';
-    const text_path = '/api/v1/text';
+    const text_path = '/api/v1/texts';
     
       restOpsDiv.addEventListener('click', async (event) => {
         if (event.target === listusersButton) {
